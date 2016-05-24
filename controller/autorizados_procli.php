@@ -36,7 +36,7 @@ class autorizados_procli extends fs_controller {
         parent::__construct(__CLASS__, 'Autorizados', 'compras', FALSE, FALSE);
     }
 
-    protected function process() {
+    protected function privat_core() {
         //Creo los tabs en las fichas de proveedores y clientes
         $this->share_extension();
 
