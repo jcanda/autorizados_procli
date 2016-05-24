@@ -2,7 +2,7 @@
 
 /*
  * This file is part of FacturaSctipts
- * Copyright (C) 2013-2015  Carlos Garcia Gomez  neorazorx@gmail.com
+ * Copyright (C) 2013-2016  Carlos Garcia Gomez  neorazorx@gmail.com
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -26,8 +26,8 @@
 
 require_model('autorizados.php');
 
-class autorizados_procli extends fs_controller {
-
+class autorizados_procli extends fs_controller
+{
     public $allow_delete;
     public $autorizados;
     public $autorizados_select;
@@ -36,7 +36,7 @@ class autorizados_procli extends fs_controller {
         parent::__construct(__CLASS__, 'Autorizados', 'compras', FALSE, FALSE);
     }
 
-    protected function process() {
+    protected function private_core() {
         //Creo los tabs en las fichas de proveedores y clientes
         $this->share_extension();
 
