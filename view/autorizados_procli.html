@@ -3,10 +3,15 @@
 <script type="text/javascript">
     function delete_autorizado(id)
     {
-        if( confirm("¿Realmente desea eliminar Autorizado ("+id+")?") )
-        {
-            window.location.href = '{$fsc->url()}&delete_autorizado='+id+'#autorizados';
-        }
+      bootbox.confirm({
+         message: '¿Realmente desea eliminar Autorizado ('+id+')?',
+         title: '<b>Atención</b>',
+         callback: function(result) {
+            if (result) {
+               window.location.href = '{$fsc->url()}&delete_autorizado='+id+'#autorizados';
+            }
+         }
+      });
     }
 </script>
 
